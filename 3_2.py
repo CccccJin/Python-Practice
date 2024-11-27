@@ -11,13 +11,15 @@ try:
     diu = float(hour)
 except:
     print("Error, please enter numeric input") 
+    quit()
     
 rate = input("Enter rate = ")
 try:
     check1 = float(rate)
 except:
     print("Error, please enter numeric input")
-
+    quit()
+    
 a = int(hour)
 b = int(rate)
 
