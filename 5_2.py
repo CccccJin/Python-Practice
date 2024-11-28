@@ -3,11 +3,13 @@
 
 total = 0
 count = 0
+largest = None
+minimum = None
 
 while True:
     a = input("enter a number: ")
     if a == 'done':
-        print(count,total,average)
+        print(count,total,largest,minimum)
         break
     try:
         conver_to_int = float(a)
@@ -15,7 +17,11 @@ while True:
         count = count +1
         # sum = sum + a
         average = float(total/count)
-        print(count,total,average)
+        if largest is None or conver_to_int > largest:
+            largest = conver_to_int
+        if minimum is None or conver_to_int < minimum:
+            minimum = conver_to_int
+        print(count,total,largest,minimum)
     except:
         if a is not int:
             print("Please enter integer")
